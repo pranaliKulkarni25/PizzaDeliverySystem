@@ -1,0 +1,49 @@
+<div class="customPizzaContainer">
+    <div class="header field-container">
+        <b>Create Your Own Pizza</b>
+        <div>Price: <span>{{totalPrice | currency}}</span> </div>
+    </div>
+    <div>
+        <form #customForm="ngForm" (ngSubmit)="onFormSubmit()">
+            <div class="field-container">
+                <label class="lbl">Crust Size</label>
+            </div>
+            <div class="field-container">
+                <div *ngFor="let data of ingredientsData?.CrustSize">
+                    <input class="radio-class" name="crust-size" type="radio" [(ngModel)]="formData.CrustSize" [value]="data.Size" (click)="calculatePrice()">
+                    <label>{{data.Size}} </label> <span class="fnt-12"> [{{data.Price | currency}}]</span> 
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="lbl">Sauce</label>
+                <select class="select-class" name="sauce" [ngModel]="formData.SelectedSauce" (ngModelChange)="setSauce($event)">
+                    <option value="" disabled>Select</option>
+                    <option *ngFor="let data of ingredientsData?.Sauce" [value]="data.Name">{{data.Name}} <span class="fnt-12"> [{{data.Price | currency}}]</span> </option>
+                </select>
+            </div>
+
+            <div class="field-container">
+                <input type="radio" name="cheese"  [(ngModel)]="formData.Cheese" value="Cheese" (click)="calculatePrice()">
+                <label class="lbl p0-10">Cheese</label> <span class="fnt-12"> [{{ingredientsData?.Cheese | currency}}]</span>
+            </div>
+
+            <div class="field-container">
+                <input type="radio" name="cheese"  [(ngModel)]="formData.Cheese" value="ExtraChese" (click)="calculatePrice()">
+                <label class="lbl p0-10">Extra Cheese</label> <span class="fnt-12"> [{{ingredientsData?.ExtraChese | currency}}]</span>
+            </div>
+
+            <div class="field-container">
+                <b>Add Topings  each @{{ingredientsData?.ToppingsPrice | currency}}</b>
+            </div>
+
+            <div class="field-container" *ngFor="let data of ingredientsData?.Toppings">
+                <input type="checkbox" class="toppings" [name]="data.Name" [value]="data.Name" [(ngModel)]="data.IsSelected" (click)="calculatePrice()"> {{data.Name}}
+            </div>
+
+            <input class="btn cp" type="submit" value="Place Order">
+
+        </form>
+    </div>
+
+</div>

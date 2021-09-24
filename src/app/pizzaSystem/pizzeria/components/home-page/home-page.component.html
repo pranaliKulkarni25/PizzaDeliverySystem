@@ -1,0 +1,24 @@
+
+
+
+<div class="container-main p-20">
+    <div class="columns">
+        <div class="column is-8">
+            <div class="columns is-multiline">
+                <div class="column is-4" *ngFor="let data of pizzaDetails?.Data">
+                    <div [ngClass]="selectedPizza?.Name === data.Name ? 'activeSection cursor' : 'cursor'" (click)="imageClicked(data)">
+                        <img class="img" [src]="'assets/pizzaImages/'+data.ImgName+ '.jpeg'">
+                        <span> Name: <b> {{data.Name}} </b></span>
+                        <span> Price: {{data.Price | currency}}</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="btn cp" (click)="placeOrder()">Place Order</button>
+            </div>
+        </div>
+        <div class="column is-4">
+            <app-custom-form (placeOrderDetails)="placeOrder($event)"></app-custom-form>
+        </div>
+    </div>
+</div>

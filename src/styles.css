@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+.field-container{
+    padding: 10px;
+}
+
+.radio-class{
+    margin: 5px;
+}
+
+.p0-10{
+    padding: 0px 0px 0 10px;
+}
+
+.p-20{
+    padding: 20px;
+}
+
+html {
+    overflow: hidden !important;
+}
+
+.btn{
+    padding: 10px 16px;
+    font-size: 14px;
+    color: white;
+    background-color: #ff5b03;
+    border: 0px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.cp{
+    cursor: pointer;
+}
+
+
+.disableBtn{
+    background-color: #e09267;
+}
+
+
+.fnt-12{
+    font-size: 12px;
+}
+
+.lbl{
+    font-weight: 600;
+}
