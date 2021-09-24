@@ -1,0 +1,55 @@
+{
+  "CrustSize": [
+    {
+      "Size": "Small",
+      "Price": 100
+    },
+    {
+      "Size": "Medium",
+      "Price": 200
+    },
+    {
+      "Size": "Large",
+      "Price": 200
+    }
+  ],
+  "Sauce": [
+    {
+      "Name": "Marinara",
+      "Price": 50
+    },
+    {
+      "Name": "Cheese",
+      "Price": 60
+    },
+    {
+      "Name": "Ranch",
+      "Price": 70
+    }
+  ],
+  "Cheese": 10,
+  "ExtraChese": 50,
+  "Toppings": [
+    {
+      "Name": "Grilled Mashrooms",
+      "IsSelected": false
+    },
+    {
+      "Name": "Onion",
+      "IsSelected": false
+    },
+    {
+      "Name": "Crisp Capsicum",
+      "IsSelected": false
+    },
+    {
+      "Name": "Fresh Tomato",
+      "IsSelected": false
+    },
+    {
+      "Name": "Paneer",
+      "IsSelected": false
+    }
+  ],
+  "ToppingsPrice": 60
+}

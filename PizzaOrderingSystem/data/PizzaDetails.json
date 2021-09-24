@@ -1,0 +1,34 @@
+{
+  "Data": [
+    {
+      "Name": "Margherita",
+      "ImgName": "margherita",
+      "Price": 100
+    },
+    {
+      "Name": "Peppy Paneer",
+      "ImgName": "new_peppy_paneer",
+      "Price": 200
+    },
+    {
+      "Name": "Veggie Paradise",
+      "ImgName": "new_veggie_paradise",
+      "Price": 300
+    },
+    {
+      "Name": "Cheese n Corn",
+      "ImgName": "new_cheese_n_corn",
+      "Price": 300
+    },
+    {
+      "Name": "Farmhouse",
+      "ImgName": "farmhouse",
+      "Price": 200
+    },
+    {
+      "Name": "Veg Extravaganza",
+      "ImgName": "new_veg_extravaganza",
+      "Price": 200
+    }
+  ]
+}
